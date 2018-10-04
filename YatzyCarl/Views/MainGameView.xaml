@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:YatzyCarl.Views"
-             mc:Ignorable="d" FontSize="11" Foreground="White"
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" FontSize="11" Foreground="White">
+
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Media/Dice.png" Stretch="UniformToFill" Opacity="0.3"/>
@@ -21,8 +21,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel  x:Name="DicePanelSave"  Background="Black" Grid.Column="2">
-            <StackPanel Orientation="Horizontal">
+        <StackPanel Margin="20,165,20,200" x:Name="DicePanelSave" Grid.RowSpan="2" Background="Black" Grid.Column="2">
+            <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
                 <Image Height="72" Name="image1" Stretch="Fill"  Width="74" />
                 <Image Height="72" Name="image2" Stretch="Fill"  Width="74" />
                 <Image Height="72" Name="image3" Stretch="Fill"  Width="74" />
@@ -31,7 +31,7 @@
                 
             </StackPanel>
 
-            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
                 <CheckBox x:Name="SaveDiceOne"   IsChecked="False" >Save1</CheckBox>
                 <CheckBox x:Name="SaveDiceTwo"   IsChecked="False" >Save2</CheckBox>
                 <CheckBox x:Name="SaveDiceThree" IsChecked="False">Save3</CheckBox>
@@ -42,7 +42,7 @@
 
         </StackPanel> 
         
-        <Grid Grid.RowSpan="10">
+        <Grid Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
@@ -154,7 +154,7 @@
         <TextBlock Text="{Binding Path=DiceValue5, Mode=OneWay}" Grid.Row="7" Grid.Column="17"></TextBlock>
 
             
-        <Button x:Name="RollDice" Grid.Row="7" Grid.Column="7">Roll Dices!</Button>
+        <Button x:Name="RollDice" Grid.Row="20" Grid.Column="11">Roll Dices!</Button>
             
          
         </Grid>
