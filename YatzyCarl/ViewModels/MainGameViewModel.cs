@@ -10,7 +10,25 @@ namespace YatzyCarl.ViewModels
 {
     public class MainGameViewModel:Screen
     {
+        /*
+         
+         ScoreCard:  Scoreboard för att hålla poängen, spelare har en eller flera scorboard,
+         
+         Dicepanel: skapar värderna för tärningarna, panelen består av Dice klassen och ScoreCard
+        
+         GameEngine, för att göra det möjligt att skicka tärningarna från dicepanel till uträkning och ger användaren poäng alternativ, användaren väljer vilket resultat.
+         Valet skickas till användarens Scorecard. 
 
+         GUI tar bort alternativet när scoreboard alternativet är taget
+
+            MVVM
+            Model- Data, klasser, egenskaper som ska användas i programmet
+            ModelView enheter som ska visar i de olika views
+            View XAML kod och kod för att förenklra gränsnittet. 
+
+        Fundering på om man kan använda sig av Bindablecollection för att binda scoreboarden till användaren och få realtids updateringar? 
+        
+         */
         DicePanel panel = new DicePanel();
         ScoreCard card = new ScoreCard();
 
@@ -48,6 +66,8 @@ namespace YatzyCarl.ViewModels
         private bool _saveDiceFour = false;
         private bool _saveDiceFive = false;
 
+        /*Borde vara i klassen Dice eller så gör man en property av den??*/
+
         public bool SaveDiceOne
         {
             get { return _saveDiceOne; }
@@ -61,6 +81,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => SaveDiceOne);
             }
         } // spara värdet om saveDice är kryssad
+        /*Borde vara i klassen Dice eller så gör man en property av den??*/
         public bool SaveDiceTwo
         {
             get { return _saveDiceTwo; }
@@ -114,6 +135,7 @@ namespace YatzyCarl.ViewModels
             }
         }
 
+        /*I klassen Scoreboard???*/
         public string UserName
         {
             get { return _userName; }
@@ -123,6 +145,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => UserName);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Ones
         {
             get { return _ones; }
@@ -132,6 +155,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Ones);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Twos
         {
             get { return _twos; }
@@ -141,6 +165,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Twos);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Threes
         {
             get { return _threes; }
@@ -150,6 +175,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Threes);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Fours
         {
             get { return _fours; }
@@ -159,6 +185,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Fours);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Fives
         {
             get { return _fives; }
@@ -168,6 +195,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Fives);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Sixes
         {
             get { return _sixes; }
@@ -177,6 +205,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Sixes);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Sum
         {
             get { return _sum; }
@@ -186,6 +215,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Sum);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Bonus
         {
             get { return _bonus; }
@@ -195,6 +225,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Bonus);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Pairs
         {
             get { return _pair; }
@@ -204,6 +235,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Pairs);
             }
         }
+        /*I klassen Scoreboard???*/
         public int TwoPairss
         {
             get { return _twoPairs; }
@@ -213,6 +245,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => TwoPairss);
             }
         }
+        /*I klassen Scoreboard???*/
         public int ThreeOfAKinds
         {
             get { return _threeOfAKind; }
@@ -222,6 +255,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => ThreeOfAKinds);
             }
         }
+        /*I klassen Scoreboard???*/
         public int FourOfAKinds
         {
             get { return _fourOfAKind; }
@@ -231,6 +265,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => FourOfAKinds);
             }
         }
+        /*I klassen Scoreboard???*/
         public int SmallStraights
         {
             get { return _smallStraight; }
@@ -240,6 +275,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => SmallStraights);
             }
         }
+        /*I klassen Scoreboard???*/
         public int LargeStraights
         {
             get { return _largeStraight; }
@@ -249,6 +285,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => LargeStraights);
             }
         }
+        /*I klassen Scoreboard???*/
         public int FullHouses
         {
             get { return _fullHouse; }
@@ -258,6 +295,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => FullHouses);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Chances
         {
             get { return _chance; }
@@ -267,6 +305,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Chances);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Yatzys
         {
             get { return _yatzy; }
@@ -276,6 +315,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Yatzys);
             }
         }
+        /*I klassen Scoreboard???*/
         public int Total
         {
             get { return _total; }
@@ -285,6 +325,8 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => Total);
             }
         }
+
+        /*I klassen Dice???*/
         public int DiceValue1
         {
             get { return _diceValue1; }
@@ -294,6 +336,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => DiceValue1);
             }
         }
+        /*I klassen Dice???*/
         public int DiceValue2
         {
             get { return _diceValue2; }
@@ -303,6 +346,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => DiceValue2);
             }
         }
+        /*I klassen Dice???*/
         public int DiceValue3
         {
             get { return _diceValue3; }
@@ -312,6 +356,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => DiceValue3);
             }
         }
+        /*I klassen Dice???*/
         public int DiceValue4
         {
             get { return _diceValue4; }
@@ -321,6 +366,7 @@ namespace YatzyCarl.ViewModels
                 NotifyOfPropertyChange(() => DiceValue4);
             }
         }
+        /*I klassen Dice???*/
         public int DiceValue5
         {
             get { return _diceValue5; }
@@ -331,6 +377,7 @@ namespace YatzyCarl.ViewModels
             }
         }
 
+        /*Metod kopplad till GameEngine? IInterface?  */
         public void RollDice()
         {
             for (int i = 0; i < dices.Length; i++)
@@ -635,23 +682,7 @@ namespace YatzyCarl.ViewModels
             }
             return result;
         } // ingen vacker lösning men fungerar!
-        //public int TwoPair(int[] diceValues)
-        //{
-        //    int result = 0;
-
-        //    for (int i = 0; i < diceValues.Length; i++)
-        //    {
-        //        if (diceValues[i] == 2)
-        //            for (int j = 0; j < diceValues.Length; j++)
-        //            {
-        //                if (diceValues[i] == 2)
-        //                {
-        //                    result = 20;
-        //                }
-        //            }
-        //    }
-        //    return result;
-        //}
+      
         public int ThreeOfKind(int[] diceValues)
 
         {
@@ -909,31 +940,7 @@ namespace YatzyCarl.ViewModels
 
             return result;
         }
-        //public int[] FullHouse()
-        //{
-
-        //}
-
-        //public int FullHouse(int[] diceValues)
-
-        //{
-        //    int result = 0;
-        //    for (int i = 0; i < diceValues.Length; i++)
-        //    {
-        //        if (diceValues[i] == 3)
-
-        //            for (int j = 0; j < diceValues.Length; j++)
-
-        //            {
-
-        //                if (diceValues[i] == 2)
-
-        //                    result = 25;
-        //            }
-        //    }
-        //    return result;
-
-        //}
+      
 
         public int[] GetAllResults()
         {
