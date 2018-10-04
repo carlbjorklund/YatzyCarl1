@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YatzyCarl
+namespace YatzyCarl.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StatisticsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StatisticsView : UserControl
     {
-        public MainWindow()
+        public StatisticsView()
         {
             InitializeComponent();
         }

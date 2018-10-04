@@ -1,0 +1,78 @@
+﻿<Window x:Class="YatzyCarl.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YatzyCarl.Views"
+        mc:Ignorable="d"
+        Title="Yatzy" Width="1024" Height="768" >
+
+    <Grid Background="Black">
+        
+        <!--Columns 5 Rows 5-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Title Panel-->
+
+        <StackPanel x:Name="TitlePanel" Margin="150,0,0,0" HorizontalAlignment="Center" Orientation="Horizontal" Background="Black" Grid.Column="3" Grid.ColumnSpan="3" >
+            <TextBlock VerticalAlignment="Center" Foreground="White" FontSize="50" >Projekt</TextBlock>
+            <TextBlock Padding="0, 0,0, 0" VerticalAlignment="Center" Foreground="Red" FontSize="80" >X</TextBlock>
+        </StackPanel>
+        
+        <!--Navigiation Bar-->
+        <DockPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="5">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.413,1.648" StartPoint="0.498,0.255">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.999"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+            
+            <StackPanel x:Name="Navbar" Margin="10">
+                   <Button x:Name="LoadHelp" Foreground="White" Background="Red" Content="Hjälp" />
+                   <Button x:Name="LoadSettings" Background="White" Content="Inställningar" />
+                   <Button x:Name="LoadStatistics" Foreground="White" Background="Blue" Content="Statistik" />
+
+                <TextBlock Margin="12" VerticalAlignment="Top" Foreground="White" FontSize="12" > Hur många spelare?</TextBlock>
+                    <Button x:Name="TwoPlayers" Foreground="Black" Background="White" Margin="5" >2 spelare</Button>
+                    <Button x:Name="ThreePlayers"  Foreground="Black" Background="White" Margin="5" >3 spelare</Button>
+                    <Button x:Name="FourtPlayers" Foreground="Black" Background="White"  Margin="5" >4 spelare</Button>
+
+                <StackPanel x:Name="UserNavBar">
+                    <TextBlock Margin="12" VerticalAlignment="Top" Foreground="White" FontSize="12" > Inloggningsalternativ</TextBlock>
+                    <Button x:Name="LoadNewUser" Margin="10"  >Ny användare</Button>
+                    <Button x:Name="LoadGuest" Margin="10"  >Gäst</Button>
+                    <Button x:Name="LoadLogin" Margin="10"  >Logga in</Button>
+
+                </StackPanel>
+
+                <StackPanel x:Name="BeginNavBar" >
+                    <TextBlock Margin="10" VerticalAlignment="Top" Foreground="White" FontSize="12" > Tryck för att börja spela!</TextBlock>
+                    <Button x:Name="LoadGame" Margin="10" Foreground="White" Background="Green" >Börja</Button>
+                    <Button x:Name="ContinueLoadedGame" Margin="10" Foreground="White" Background="Green"  >Fortsätt</Button>
+
+                </StackPanel>
+
+            </StackPanel>
+        </DockPanel>
+        
+        <ContentControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" x:Name="ActiveItem"/>
+
+    </Grid>
+
+</Window>
