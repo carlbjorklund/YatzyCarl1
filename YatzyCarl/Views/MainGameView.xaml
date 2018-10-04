@@ -154,7 +154,7 @@
         <TextBlock Text="{Binding Path=DiceValue5, Mode=OneWay}" Grid.Row="7" Grid.Column="17"></TextBlock>
 
             
-        <Button x:Name="RollDice" Grid.Row="20" Grid.Column="11">Roll Dices!</Button>
+        <Button x:Name="RollDice" Grid.Row="20" Grid.Column="10" Grid.ColumnSpan="2" Margin="9.5,0,0.5,10">Roll Dices!</Button>
             
          
         </Grid>
