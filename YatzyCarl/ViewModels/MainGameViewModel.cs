@@ -1028,7 +1028,9 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
-        }  // presntera i gränssnitett
+            ClearDice();
+        {
+            }  // presntera i gränssnitett
         public void PickTwo()
         {
             SaveToDiceValue();
@@ -1036,6 +1038,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickThree()
         {
@@ -1044,6 +1047,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickFour()
         {
@@ -1052,6 +1056,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickFive()
         {
@@ -1060,6 +1065,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickSix()
         {
@@ -1068,6 +1074,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickPair()
         {
@@ -1084,6 +1091,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickThreeOfKind()
         {
@@ -1092,6 +1100,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickFourOfKInd()
         {
@@ -1100,6 +1109,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickSmallStraight()
         {
@@ -1108,6 +1118,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickLargeStraight()
         {
@@ -1116,6 +1127,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickFullHouse()
         {
@@ -1124,6 +1136,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickChance()
         {
@@ -1132,6 +1145,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
         public void PickYatzy()
         {
@@ -1140,6 +1154,7 @@ namespace YatzyCarl.ViewModels
             CalculateSum();
             CalculateBonus();
             CalculateTotal();
+            ClearDice();
         }
 
         public void ShowAllPickedValues()
