@@ -23,6 +23,8 @@ namespace YatzyCarl.Views
         public MainGameView()
         {
             InitializeComponent();
+          
         }
+
     }
 }

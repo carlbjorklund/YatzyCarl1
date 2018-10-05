@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using YatzyCarl.Models;
 
 namespace YatzyCarl.ViewModels
@@ -12,7 +14,7 @@ namespace YatzyCarl.ViewModels
     {
         /*
          
-         ScoreCard:  Scoreboard för att hålla poängen, spelare har en eller flera scorboard,
+         ScoreCard:  Scoreboard för att hålla poängen, spelare har en eller flera scoreboard,
          
          Dicepanel: skapar värderna för tärningarna, panelen består av Dice klassen och ScoreCard
         
@@ -1171,7 +1173,7 @@ namespace YatzyCarl.ViewModels
         {
             Total = Sum + Bonus + Pairs + TwoPairss + ThreeOfAKinds + FourOfAKinds + SmallStraights + LargeStraights + FullHouses + Chances + Yatzys;
         }
-
+       
     }
 }
    

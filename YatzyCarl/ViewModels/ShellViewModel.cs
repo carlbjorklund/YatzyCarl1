@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 using YatzyCarl.Models;
 using YatzyCarl.ViewModels;
 using YatzyCarl.Views;
@@ -45,8 +46,8 @@ namespace YatzyCarl.ViewModels
         {
             ActivateItem(new MainGameViewModel());
         }
+      
 
-        
         DicePanel panel = new DicePanel();
         ScoreCard card = new ScoreCard();
 
