@@ -1029,8 +1029,8 @@ namespace YatzyCarl.ViewModels
             CalculateBonus();
             CalculateTotal();
             ClearDice();
-        {
-            }  // presntera i gränssnitett
+        }
+      
         public void PickTwo()
         {
             SaveToDiceValue();
