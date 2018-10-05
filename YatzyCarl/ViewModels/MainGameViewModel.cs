@@ -463,6 +463,10 @@ namespace YatzyCarl.ViewModels
             {
                 dices[i] = 0;
             }
+            for (int i = 0; i < diceValues.Length; i++)
+            {
+                diceValues[i] = 0;
+            }
 
         } // rensa dices och keepdices
         public void clearSaveDices()
