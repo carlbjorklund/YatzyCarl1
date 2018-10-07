@@ -16,7 +16,7 @@ namespace YatzyCarl.ViewModels
          
          ScoreCard:  Scoreboard för att hålla poängen, spelare har en eller flera scoreboard,
          
-         Dicepanel: skapar värderna för tärningarna, panelen består av Dice klassen och ScoreCard
+         Dicepanel: skapar värderna för tärningarna, panelen består av Dice klassen och propScoreCard
         
          GameEngine, för att göra det möjligt att skicka tärningarna från dicepanel till uträkning och ger användaren poäng alternativ, användaren väljer vilket resultat.
          Valet skickas till användarens Scorecard. 
@@ -37,6 +37,7 @@ namespace YatzyCarl.ViewModels
         int[] dices = new int[5] { 0, 0, 0, 0, 0 };
         public int[] diceValues = new int[6] { 0, 0, 0, 0, 0, 0 };
         bool[] keepDice = new bool[5] { false, false, false, false, false };
+        int[] diceResults = new int[15];
 
         private string _userName = "Bubbles_72";
         private int _ones = 0;
@@ -950,7 +951,7 @@ namespace YatzyCarl.ViewModels
 
         public int[] GetAllResults()
         {
-            int[] diceResults = new int[15];
+            //int[] diceResults = new int[15];
 
             if (One(diceValues) > 0)
             {
