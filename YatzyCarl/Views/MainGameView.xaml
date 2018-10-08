@@ -112,22 +112,37 @@
             
         <TextBlock Text="{Binding Path=UserName, Mode=TwoWay}" Grid.Row="2" Grid.Column="5"></TextBlock>
         <TextBlock Text="{Binding Path=Ones, Mode=TwoWay}" Grid.Row="3" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropOnes, Mode=TwoWay}" Grid.Row="3" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropTwos, Mode=TwoWay}" Grid.Row="4" Grid.Column="0"></TextBlock>         
         <TextBlock Text="{Binding Path=Threes, Mode=TwoWay}" Grid.Row="5" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropThree, Mode=TwoWay}" Grid.Row="5" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Fours, Mode=TwoWay}" Grid.Row="6" Grid.Column="5"></TextBlock>
-        <TextBlock Text="{Binding Path=Fives, Mode=TwoWay}" Grid.Row="7" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropFour, Mode=TwoWay}" Grid.Row="6" Grid.Column="0"></TextBlock>
+         <TextBlock Text="{Binding Path=Fives, Mode=TwoWay}" Grid.Row="7" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropFive, Mode=TwoWay}" Grid.Row="7" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Sixes, Mode=TwoWay}" Grid.Row="8" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropSixes, Mode=TwoWay}" Grid.Row="8" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Sum, Mode=TwoWay}" Grid.Row="9" Grid.Column="5"></TextBlock>
         <TextBlock Text="{Binding Path=Bonus, Mode=TwoWay}" Grid.Row="10" Grid.Column="5"></TextBlock>
         <TextBlock Text="{Binding Path=Pairs, Mode=TwoWay}" Grid.Row="11" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropPair, Mode=TwoWay}" Grid.Row="11" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=TwoPairss, Mode=TwoWay}" Grid.Row="12" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropTwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=ThreeOfAKinds, Mode=TwoWay}" Grid.Row="13" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropThreeOfAKind, Mode=TwoWay}" Grid.Row="13" Grid.Column="0"></TextBlock>         
         <TextBlock Text="{Binding Path=FourOfAKinds, Mode=TwoWay}" Grid.Row="14" Grid.Column="5"></TextBlock>
+            <TextBlock  Foreground="Red" Text="{Binding Path=PropFourOfAKind, Mode=TwoWay}" Grid.Row="14" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=SmallStraights, Mode=TwoWay}" Grid.Row="15" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropSmallStraight, Mode=TwoWay}" Grid.Row="15" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=LargeStraights, Mode=TwoWay}" Grid.Row="16" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropLargeStraight, Mode=TwoWay}" Grid.Row="16" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=FullHouses, Mode=TwoWay}" Grid.Row="17" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropFullHouse, Mode=TwoWay}" Grid.Row="17" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Chances, Mode=TwoWay}" Grid.Row="18" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropChance, Mode=TwoWay}" Grid.Row="18" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Yatzys, Mode=TwoWay}" Grid.Row="19" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropYatzy, Mode=TwoWay}" Grid.Row="19" Grid.Column="0"></TextBlock>
         <TextBlock Text="{Binding Path=Total, Mode=TwoWay}" Grid.Row="20" Grid.Column="5"></TextBlock>
 
         <TextBlock Text="{Binding Path=DiceValue1, Mode=OneWay}" Grid.Row="7" Grid.Column="9"></TextBlock>
@@ -138,6 +153,7 @@
 
             
         <Button x:Name="RollDice" Foreground="White" Background="Red" Grid.Row="20" Grid.Column="7"  Margin="9.5,0,0.5,10">Roll Dices!</Button>
+        <Button x:Name="GetAllResults" Foreground="White" Background="Red" Grid.Row="20" Grid.Column="1"  Margin="9.5,0,0.5,10">Calculate Dices!</Button>
             
          
         </Grid>

@@ -41,22 +41,203 @@ namespace YatzyCarl.ViewModels
 
         private string _userName = "Bubbles_72";
         private int _ones = 0;
+        private int _propones;
+        public int PropOnes
+        {
+            get { return _propones; }
+            set
+            {
+                _propones = value; 
+              
+                NotifyOfPropertyChange(() => PropOnes);
+            }
+        }
         private int _twos = 0;
+        private int _proptwos = 0;
+        public int PropTwos
+        {
+            get { return _proptwos; }
+            set
+            {
+                _proptwos = value;
+
+                NotifyOfPropertyChange(() => PropTwos);
+            }
+        }
         private int _threes = 0;
+        private int _propthree;
+        public int PropThree
+        {
+            get { return _propthree; }
+            set
+            {
+                _propthree = value;
+
+                NotifyOfPropertyChange(() => PropThree);
+            }
+        }
         private int _fours = 0;
+        private int _propfours;
+        public int PropFour
+        {
+            get { return _propfours; }
+            set
+            {
+                _propfours = value;
+
+                NotifyOfPropertyChange(() => PropFour);
+            }
+        }
+
         private int _fives = 0;
+        private int _propfives;
+        public int PropFive
+        {
+            get { return _fives; }
+            set
+            {
+                _fives = value;
+
+                NotifyOfPropertyChange(() => PropFive);
+            }
+        }
+
         private int _sixes = 0;
+        private int _propsixes;
+        public int PropSixes
+        {
+            get { return _sixes; }
+            set
+            {
+                _sixes = value;
+
+                NotifyOfPropertyChange(() => PropSixes);
+            }
+        }
+
         private int _sum = 0;
         private int _bonus = 0;
         private int _pair = 0;
+        private int _proppair;
+        public int PropPair
+        {
+            get { return _proppair; }
+            set
+            {
+                _proppair = value;
+
+                NotifyOfPropertyChange(() => PropPair);
+            }
+        }
+
+
         private int _twoPairs = 0;
+        private int _proptwopairs;
+        public int PropTwoPairs
+        {
+            get { return _proptwopairs; }
+            set
+            {
+                _proptwopairs = value;
+
+                NotifyOfPropertyChange(() => _proptwopairs);
+            }
+        }
+
         private int _threeOfAKind = 0;
+        private int _propthreeOfAkind;
+        public int PropThreeOfAKind
+        {
+            get { return _propthreeOfAkind; }
+            set
+            {
+                _propthreeOfAkind = value;
+
+                NotifyOfPropertyChange(() => PropThreeOfAKind);
+            }
+        }
+
+
         private int _fourOfAKind = 0;
+        private int _propfourOfAKind;
+        public int PropFourOfAKind
+        {
+            get { return _propfourOfAKind; }
+            set
+            {
+                _propfourOfAKind = value;
+
+                NotifyOfPropertyChange(() => PropFourOfAKind);
+            }
+        }
+
+
+
         private int _smallStraight = 0;
+        private int _propsmallStraight;
+        public int PropSmallStraight
+        {
+            get { return _propsmallStraight; }
+            set
+            {
+                _propsmallStraight = value;
+
+                NotifyOfPropertyChange(() => PropSmallStraight);
+            }
+        }
+
+
         private int _largeStraight = 0;
+        private int _proplargeStraight;
+        public int PropLargeStraight
+        {
+            get { return _proplargeStraight; }
+            set
+            {
+                _proplargeStraight = value;
+
+                NotifyOfPropertyChange(() => PropLargeStraight);
+            }
+        }
+
         private int _fullHouse = 0;
+        private int _propFullHouse;
+        public int PropFullHouse
+        {
+            get { return _propFullHouse; }
+            set
+            {
+                _propFullHouse = value;
+
+                NotifyOfPropertyChange(() => PropFullHouse);
+            }
+        }
+
         private int _chance = 0;
+        private int _propchance;
+        public int PropChance
+        {
+            get { return _propchance; }
+            set
+            {
+                _propchance = value;
+
+                NotifyOfPropertyChange(() => PropChance);
+            }
+        }
+
         private int _yatzy = 0;
+        private int _propyatzy;
+        public int PropYatzy
+        {
+            get { return _propyatzy; }
+            set
+            {
+                _propyatzy = value;
+
+                NotifyOfPropertyChange(() => PropYatzy);
+            }
+        }
         private int _total = 0;
         private int _diceValue1 = 0;
         private int _diceValue2 = 0;
@@ -383,6 +564,7 @@ namespace YatzyCarl.ViewModels
         /*Metod kopplad till GameEngine? IInterface?  */
         public void RollDice()
         {
+            ClearProp();
             for (int i = 0; i < dices.Length; i++)
             {
                 dices[i] = panel.FirstRoll();
@@ -423,7 +605,7 @@ namespace YatzyCarl.ViewModels
                 }
                 else dices[4] = DiceValue5;
             }
-            GetAllResults();
+            
         
 
 
@@ -454,12 +636,43 @@ namespace YatzyCarl.ViewModels
                         diceValues[5]++;
                         break;
                 }
-            
+
                 clearSaveDices();
                 ClearDiceValues();
             }
 
-        } // Alla kategoriefunktioner läser av diceValue arrayen så här sparas det ner till denna.
+        }
+
+        public void SaveToDiceValue1()
+        {
+            for (int i = 0; i < dices.Length; i++)
+            {
+                switch (dices[i])
+                {
+                    case 1:
+                        diceValues[0]++;
+                        break;
+                    case 2:
+                        diceValues[1]++;
+                        break;
+                    case 3:
+                        diceValues[2]++;
+                        break;
+                    case 4:
+                        diceValues[3]++;
+                        break;
+                    case 5:
+                        diceValues[4]++;
+                        break;
+                    case 6:
+                        diceValues[5]++;
+                        break;
+                }
+
+              
+            }
+
+        }// Alla kategoriefunktioner läser av diceValue arrayen så här sparas det ner till denna.
         public void ClearDice()
         {
             for (int i = 0; i < keepDice.Length; i++)
@@ -955,72 +1168,95 @@ namespace YatzyCarl.ViewModels
         }
       
 
-        public int[] GetAllResults()
+        public void GetAllResults()
         {
+            ClearProp();
+            SaveToDiceValue1();
             //int[] diceResults = new int[15];
 
             if (One(diceValues) > 0)
             {
-                diceResults[0] = One(diceValues);
+                PropOnes = One(diceValues);
             }
             if (Two(diceValues) > 0)
             {
-                diceResults[1] = Two(diceValues);
+                PropTwos = Two(diceValues);
             }
             if (Three(diceValues) > 0)
             {
-                diceResults[2] = Three(diceValues);
+                PropThree = Three(diceValues);
             }
             if (Four(diceValues) > 0)
             {
-                diceResults[3] = Four(diceValues);
+                PropFour = Four(diceValues);
             }
             if (Five(diceValues) > 0)
             {
-                diceResults[4] = Five(diceValues);
+                PropFive = Five(diceValues);
             }
             if (Six(diceValues) > 0)
             {
-                diceResults[5] = Six(diceValues);
+                PropSixes = Six(diceValues);
             }
             if (Pair(diceValues) > 0)
             {
-                diceResults[6] = Pair(diceValues);
+               PropPair= Pair(diceValues);
             }
             if (TwoPair(diceValues) > 0)
             {
-                diceResults[7] = TwoPair(diceValues);
+                PropTwoPairs = TwoPair(diceValues);
             }
             if (ThreeOfKind(diceValues) > 0)
             {
-                diceResults[8] = ThreeOfKind(diceValues);
+                PropThreeOfAKind = ThreeOfKind(diceValues);
             }
             if (FourOfKind(diceValues) > 0)
             {
-                diceResults[9] = FourOfKind(diceValues);
+                PropFourOfAKind= FourOfKind(diceValues);
             }
             if (SmallStraight(diceValues) > 0)
             {
-                diceResults[10] = SmallStraight(diceValues);
+                PropSmallStraight = SmallStraight(diceValues);
             }
             if (BigStraight(diceValues) > 0)
             {
-                diceResults[11] = BigStraight(diceValues);
+                PropLargeStraight = BigStraight(diceValues);
             }
             if (FullHouse(diceValues) > 0)
             {
-                diceResults[12] = FullHouse(diceValues);
+                PropFullHouse= FullHouse(diceValues);
             }
             if (Chance(diceValues) > 0)
             {
-                diceResults[13] = Chance(diceValues);
+                PropChance = Chance(diceValues);
             }
             if (Yatzee(diceValues) > 0)
             {
-                diceResults[14] = Yatzee(diceValues);
+                PropYatzy = Yatzee(diceValues);
             }
-            return diceResults;
+            
+           
         }  // få ut alla 15 kategorieresultat i en lista (som man sedan kan presentera i gränssnittet)
+
+        private void ClearProp()
+        {
+            PropOnes = 0;
+            PropTwos = 0;
+            PropThree = 0;
+            PropFour = 0;
+            PropFive = 0;
+            PropSixes = 0;
+            PropPair = 0;
+            PropTwoPairs = 0;
+            PropThreeOfAKind = 0;
+            PropFourOfAKind = 0;
+            PropSmallStraight = 0;
+            PropLargeStraight = 0;
+            PropFullHouse = 0;
+            PropChance = 0;
+            PropYatzy = 0;
+        }
+
         public void Resultat()
         {
             //int[] PoängLista = GetAllResults();
