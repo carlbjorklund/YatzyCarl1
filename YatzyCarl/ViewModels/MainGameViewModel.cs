@@ -423,7 +423,12 @@ namespace YatzyCarl.ViewModels
                 }
                 else dices[4] = DiceValue5;
             }
-        }  // slumpa tärningsslag och samtidigt kolla om man ska spara tärningar
+            GetAllResults();
+        
+
+
+
+            }  // slumpa tärningsslag och samtidigt kolla om man ska spara tärningar
         public void SaveToDiceValue()
         {
             for (int i = 0; i < dices.Length; i++)
@@ -449,6 +454,7 @@ namespace YatzyCarl.ViewModels
                         diceValues[5]++;
                         break;
                 }
+            
                 clearSaveDices();
                 ClearDiceValues();
             }

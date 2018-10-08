@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:YatzyCarl.Views"
              mc:Ignorable="d" FontSize="11" Foreground="White">
 
-    <Grid>
+    <Grid >
         <Grid.Background>
-            <ImageBrush ImageSource="/Media/Dice.png" Stretch="UniformToFill" Opacity="0.3"/>
+            <ImageBrush ImageSource="/Media/Dice.png" Stretch="UniformToFill" Opacity="1"/>
         </Grid.Background>
         
         <Grid.ColumnDefinitions>
@@ -137,7 +137,7 @@
         <TextBlock Text="{Binding Path=DiceValue5, Mode=OneWay}" Grid.Row="7" Grid.Column="17"></TextBlock>
 
             
-        <Button x:Name="RollDice" Background="Green" Grid.Row="20" Grid.Column="7"  Margin="9.5,0,0.5,10">Roll Dices!</Button>
+        <Button x:Name="RollDice" Foreground="White" Background="Red" Grid.Row="20" Grid.Column="7"  Margin="9.5,0,0.5,10">Roll Dices!</Button>
             
          
         </Grid>
