@@ -33,12 +33,8 @@
                     <Expander Foreground="White" Header="Yatzy-varianter, vilken ska jag välja?" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
                         <ScrollViewer Height="35">
                             <TextBlock TextWrapping="Wrap" 
-            Text="Yatzy kan spelas i två olika varianter och det är inte möjligt att ändra variant under spelets gång. 
-Klassisk: 
-Spelaren väljer själv till vilken kategori man vill spara sin poängsumma. Man har alltså hela protokollet till sitt förfogande. I klassisk Yatzy utfaller bonus om poängsumman på övre halvan blir 63 eller högre.
-Styrd:
-I den här spelformen måste kategorierna tas i ordningsföljd. Eftersom styrd Yatzy är svårare får man bonus om poängsumman på övre halvan är 42 eller högre.
-" FontSize="10"/>
+            Text="Yatzy kan spelas i två olika varianter och det är inte möjligt att ändra variant under spelets gång. Klassisk: Spelaren väljer själv till vilken kategori man vill spara sin poängsumma. Man har alltså hela protokollet till sitt förfogande. I klassisk Yatzy utfaller bonus om poängsumman på övre halvan blir 63 eller högre.
+Styrd:I den här spelformen måste kategorierna tas i ordningsföljd. Eftersom styrd Yatzy är svårare får man bonus om poängsumman på övre halvan är 42 eller högre." FontSize="10"/>
                         </ScrollViewer>
                     </Expander>
                 </StackPanel>
